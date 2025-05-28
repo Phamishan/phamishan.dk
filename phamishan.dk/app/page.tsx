@@ -1,0 +1,168 @@
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { goTo } from "./components/carousel";
+import Starfield from "react-starfield";
+import MouseGlow from "./components/mouseGlow";
+
+export default function Home() {
+    return (
+        <>
+            <MouseGlow />
+            <main className="flex flex-col gap-[32px] row-start-2 items-center">
+                <div className="navbar bg-base-100 shadow-sm sticky top-0 z-10">
+                    <div className="navbar-start">
+                        <div className="dropdown">
+                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                                <li>
+                                    <a className="text-lg" href="/about">
+                                        ABOUT
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="text-lg">MY WORK</a>
+                                </li>
+                                <li>
+                                    <a className="text-lg">CONTACT</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a className="text-xl font-bold ps-4" href="/">
+                            Phamishan
+                        </a>
+                    </div>
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1">
+                            <li>
+                                <a className="text-xl" href="/about">
+                                    ABOUT
+                                </a>
+                            </li>
+                            <li>
+                                <a className="text-xl">MY WORK</a>
+                            </li>
+                            <li>
+                                <a className="text-xl">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="navbar-end flex gap-2">
+                        <button className="btn btn-outline">
+                            <MdEmail />
+                        </button>
+                        <button className="btn btn-outline">
+                            <FaLinkedin />
+                        </button>
+                        <button className="btn btn-outline">
+                            <FaGithub />
+                        </button>
+                    </div>
+                </div>
+
+                <div className="card card-border border-neutral-content bg-base-200 w-250">
+                    <div className="card-body">
+                        <div className="flex justify-between">
+                            <h2 className="card-title justify-start text-xl">Phamishan Packiaseelan</h2>
+                            <div className="card-actions justify-end">
+                                <div className="items-center flex gap-2">
+                                    <button className="btn btn-outline">
+                                        <MdEmail />
+                                    </button>
+                                    <button className="btn btn-outline">
+                                        <FaLinkedin />
+                                    </button>
+                                    <button className="btn btn-outline">
+                                        <FaGithub />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <p className="text-lg pb-5">
+                            <span className="inline-block align-middle mr-2 pb-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                    <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
+                                </svg>
+                            </span>
+                            Karup, Denmark
+                        </p>
+                        <p>A card component has a figure, a body part, and inside body there are title and actions parts.</p>
+                    </div>
+                </div>
+
+                <div className="flex justify-center text-3xl font-bold py-5">Personal projects</div>
+
+                <div className="card card-border border-neutral-content bg-base-200 w-250 h-100">
+                    <div className="card-body">
+                        <div className="carousel w-full">
+                            <div id="slide1" className="carousel-item relative w-full">
+                                <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" className="w-full" />
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a onClick={goTo} href="#slide4" className="btn btn-circle">
+                                        ❮
+                                    </a>
+                                    <a onClick={goTo} href="#slide2" className="btn btn-circle">
+                                        ❯
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="slide2" className="carousel-item relative w-full">
+                                <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" className="w-full" />
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a onClick={goTo} href="#slide1" className="btn btn-circle">
+                                        ❮
+                                    </a>
+                                    <a onClick={goTo} href="#slide3" className="btn btn-circle">
+                                        ❯
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="slide3" className="carousel-item relative w-full">
+                                <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" className="w-full" />
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a onClick={goTo} href="#slide2" className="btn btn-circle">
+                                        ❮
+                                    </a>
+                                    <a onClick={goTo} href="#slide4" className="btn btn-circle">
+                                        ❯
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="slide4" className="carousel-item relative w-full">
+                                <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" className="w-full" />
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a onClick={goTo} href="#slide3" className="btn btn-circle">
+                                        ❮
+                                    </a>
+                                    <a onClick={goTo} href="#slide1" className="btn btn-circle">
+                                        ❯
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex justify-center text-3xl font-bold py-5">Technologies</div>
+                <div className="pb-8">
+                    <div className="card card-border border-neutral-content bg-base-200 w-250 h-100">
+                        <div className="card-body">
+                            <div className="flex flex-wrap gap-4">
+                                <div className="badge badge-outline">Next.js</div>
+                                <div className="badge badge-outline">React</div>
+                                <div className="badge badge-outline">TypeScript</div>
+                                <div className="badge badge-outline">Tailwind CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="Home">
+                    <Starfield starCount={1000} starColor={[255, 255, 255]} speedFactor={0.05} backgroundColor="black" />
+                </div>
+            </main>
+        </>
+    );
+}
