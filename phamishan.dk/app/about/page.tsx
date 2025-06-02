@@ -103,8 +103,14 @@ export default function Home() {
                             <div className="card card-border border-neutral-content bg-base-200 w-121 h-100">
                                 <div className="card-body">
                                     <ul className="steps steps-vertical text-sm">
-                                        <li className="step step-secondary">Register</li>
-                                        <li className="step step-secondary">Choose plan</li>
+                                        <li className="step">
+                                            <span className="step-icon">📚</span>
+                                            <span className="step-title">Register</span>
+                                        </li>
+                                        <li className="step">
+                                            <span className="step-icon">📚</span>
+                                            <span className="step-title">Choose plan</span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -113,15 +119,16 @@ export default function Home() {
                             <div className="card card-border border-neutral-content bg-base-200 w-121 h-100 place-content-center">
                                 <div className="card-body">
                                     <ul className="steps steps-vertical text-sm">
-                                        <li className="step step-secondary">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus magnam repudiandae, natus molestias odit consequatur quas, totam aperiam modi dignissimos, iusto sint ut reiciendis ab dolores tempora placeat quis!
-                                            <br />
-                                            <br />
-                                            2020 - Present
-                                            <br />
-                                            <br />
+                                        <li data-content="2020 - :" className="step">
+                                            <span className="step-icon">💼</span>
+                                            Jeg har arbejdet som softwareudvikler siden 2020, hvor jeg har haft mulighed for at arbejde med forskellige teknologier og projekter.
                                         </li>
-                                        <li className="step step-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur debitis necessitatibus. Quasi reprehenderit illo, ad hic accusantium laboriosam eum vel quae, voluptatem ullam facere quisquam accusamus quos, facilis perferendis.</li>
+                                        <li className="step">
+                                            <span className="step-icon">💼</span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus magnam repudiandae, natus molestias odit consequatur quas, totam aperiam modi dignissimos, iusto sint ut reiciendis ab dolores tempora placeat quis! 2020 - Present
+                                        </li>
+                                        <li className="step">
+                                            <span className="step-icon">💼</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur debitis necessitatibus. Quasi reprehenderit illo, ad hic accusantium laboriosam eum vel quae, voluptatem ullam facere quisquam accusamus quos, facilis perferendis.
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
