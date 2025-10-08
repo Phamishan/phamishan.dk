@@ -2,12 +2,14 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { goTo } from "./components/carousel";
 import Starfield from "react-starfield";
-import MouseGlow from "./components/mouseGlow";
+//import MouseGlow from "./components/mouseGlow";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
     return (
         <>
-            <MouseGlow />
+            {/* <MouseGlow /> */}
             <main className="flex flex-col gap-[32px] row-start-2 items-center">
                 <div className="navbar bg-base-100 shadow-sm sticky top-0 z-10">
                     <div className="navbar-start">
@@ -31,9 +33,9 @@ export default function Home() {
                                 </li>
                             </ul>
                         </div>
-                        <a className="text-xl font-bold ps-4" href="/">
+                        <Link className="text-xl font-bold ps-4" href="/">
                             Phamishan
-                        </a>
+                        </Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -89,17 +91,23 @@ export default function Home() {
                             </span>
                             Karup, Denmark
                         </p>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts.</p>
+                        <p>21 years old developer with 5 years of experience.</p>
                     </div>
                 </div>
 
                 <div className="flex justify-center text-3xl font-bold py-5">Personal projects</div>
 
-                <div className="card card-border border-neutral-content bg-base-200 w-250 h-100">
+                <div className="card card-border border-neutral-content bg-base-200 w-250">
                     <div className="card-body">
-                        <div className="carousel w-full">
-                            <div id="slide1" className="carousel-item relative w-full">
-                                <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" className="w-full" />
+                        <div className="carousel w-full h-96">
+                            <div id="slide1" className="carousel-item relative w-full flex items-center justify-center">
+                                <Image src="/assets/phamibot.png" alt="PhamiBot" className="w-full h-full object-contain" width={800} height={400} />
+                                <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
+                                    <h3 className="text-lg font-bold">PhamiBot</h3>
+                                </div>
+                                <a href="https://github.com/Phamishan/PhamiBot" target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 bg-black bg-opacity-70 text-white p-2 rounded-lg transition-all duration-200 hover:bg-opacity-90">
+                                    <FaGithub className="w-6 h-6" />
+                                </a>
                                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                                     <a onClick={goTo} href="#slide4" className="btn btn-circle">
                                         ❮
@@ -109,8 +117,14 @@ export default function Home() {
                                     </a>
                                 </div>
                             </div>
-                            <div id="slide2" className="carousel-item relative w-full">
-                                <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" className="w-full" />
+                            <div id="slide2" className="carousel-item relative w-full flex items-center justify-center">
+                                <Image src="/assets/phamijam.png" alt="PhamiJam" className="w-full h-full object-contain" width={800} height={400} />
+                                <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
+                                    <h3 className="text-lg font-bold">PhamiJam</h3>
+                                </div>
+                                <a href="https://github.com/Phamishan/PhamiJam" target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 bg-black bg-opacity-70 text-white p-2 rounded-lg transition-all duration-200 hover:bg-opacity-90">
+                                    <FaGithub className="w-6 h-6" />
+                                </a>
                                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                                     <a onClick={goTo} href="#slide1" className="btn btn-circle">
                                         ❮
@@ -120,8 +134,14 @@ export default function Home() {
                                     </a>
                                 </div>
                             </div>
-                            <div id="slide3" className="carousel-item relative w-full">
-                                <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" className="w-full" />
+                            <div id="slide3" className="carousel-item relative w-full flex items-center justify-center">
+                                <Image src="/assets/phamiapex.png" alt="PhamiApex" className="w-full h-full object-contain" width={800} height={400} />
+                                <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
+                                    <h3 className="text-lg font-bold">PhamiApex</h3>
+                                </div>
+                                <a href="https://github.com/Phamishan/PhamiApex" target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 bg-black bg-opacity-70 text-white p-2 rounded-lg transition-all duration-200 hover:bg-opacity-90">
+                                    <FaGithub className="w-6 h-6" />
+                                </a>
                                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                                     <a onClick={goTo} href="#slide2" className="btn btn-circle">
                                         ❮
@@ -131,8 +151,14 @@ export default function Home() {
                                     </a>
                                 </div>
                             </div>
-                            <div id="slide4" className="carousel-item relative w-full">
-                                <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" className="w-full" />
+                            <div id="slide4" className="carousel-item relative w-full flex items-center justify-center">
+                                <Image src="/assets/phamivalo.png" alt="PhamiValo" className="w-full h-full object-contain" width={800} height={400} />
+                                <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
+                                    <h3 className="text-lg font-bold">PhamiValo</h3>
+                                </div>
+                                <a href="https://github.com/Phamishan/PhamiValo" target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 bg-black bg-opacity-70 text-white p-2 rounded-lg transition-all duration-200 hover:bg-opacity-90">
+                                    <FaGithub className="w-6 h-6" />
+                                </a>
                                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                                     <a onClick={goTo} href="#slide3" className="btn btn-circle">
                                         ❮
@@ -151,6 +177,13 @@ export default function Home() {
                     <div className="card card-border border-neutral-content bg-base-200 w-250 h-100">
                         <div className="card-body">
                             <div className="flex flex-wrap gap-4">
+                                <div className="badge badge-outline">HTML</div>
+                                <div className="badge badge-outline">CSS</div>
+                                <div className="badge badge-outline">JavaScript</div>
+                                <div className="badge badge-outline">Node.js</div>
+                                <div className="badge badge-outline">C#</div>
+                                <div className="badge badge-outline">MySQL</div>
+                                <div className="badge badge-outline">Flutter / Dart</div>
                                 <div className="badge badge-outline">Next.js</div>
                                 <div className="badge badge-outline">React</div>
                                 <div className="badge badge-outline">TypeScript</div>

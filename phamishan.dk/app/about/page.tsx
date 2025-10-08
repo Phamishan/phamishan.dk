@@ -1,12 +1,14 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Starfield from "react-starfield";
-import MouseGlow from "../components/mouseGlow";
+//import MouseGlow from "../components/mouseGlow";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
     return (
         <>
-            <MouseGlow />
+            {/* <MouseGlow /> */}
             <main className="flex flex-col gap-[32px] row-start-2 items-center">
                 <div className="navbar bg-base-100 shadow-sm sticky top-0 z-10">
                     <div className="navbar-start">
@@ -28,9 +30,9 @@ export default function Home() {
                                 </li>
                             </ul>
                         </div>
-                        <a className="text-xl font-bold ps-4" href="/">
+                        <Link className="text-xl font-bold ps-4" href="/">
                             Phamishan
-                        </a>
+                        </Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -58,9 +60,9 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="card card-border border-neutral-content bg-base-200 w-250 h-65">
+                <div className="card card-border border-neutral-content bg-base-200 w-250">
                     <div className="card-body">
-                        <div className="flex justify-between">
+                        <div className="flex justify-between mb-4">
                             <h2 className="card-title justify-start text-xl">Phamishan Packiaseelan</h2>
                             <div className="card-actions justify-end">
                                 <div className="items-center flex gap-2">
@@ -76,15 +78,24 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <p className="text-lg">
-                            <span className="inline-block align-middle mr-2 pb-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-                                    <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
-                                </svg>
-                            </span>
-                            Karup, Denmark
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsa voluptas. Incidunt vel culpa, facilis veritatis molestiae sit dignissimos aperiam soluta impedit excepturi officiis expedita, ex harum pariatur? Non, magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit aliquam mollitia explicabo quae animi doloremque, cupiditate ullam ut tempora molestias, atque praesentium dolores ab! Quos optio aliquid maxime voluptate!</p>
+                        <div className="flex gap-6 items-start">
+                            <div className="flex-1">
+                                <p className="text-lg mb-4">
+                                    <span className="inline-block align-middle mr-2 pb-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                            <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
+                                        </svg>
+                                    </span>
+                                    Karup, Denmark
+                                </p>
+                                <p>Jeg er en målrettet og ung dreng, som altid stræber efter at lære mere og udvikle mine færdigheder inden for softwareudvikling.</p>
+                            </div>
+                            <div className="flex-shrink-0">
+                                <div className="relative w-40 h-40">
+                                    <Image src="/assets/phamishan.png" alt="Phamishan Packiaseelan" width={300} height={300} className="w-full h-full rounded-lg shadow-md object-cover" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
