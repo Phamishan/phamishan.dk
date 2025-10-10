@@ -3,8 +3,8 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "Home | Phamishan",
-    description: "Phamishan's personal website",
+    title: "Hjem | Phamishan",
+    description: "Phamishans personlige hjemmeside",
 };
 
 const spaceGrotesk = Space_Grotesk({
@@ -18,7 +18,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="da">
             <body className={`${spaceGrotesk.className} antialiased`}>{children}</body>
         </html>
     );

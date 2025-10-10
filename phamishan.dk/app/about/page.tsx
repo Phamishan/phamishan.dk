@@ -20,13 +20,13 @@ export default function Home() {
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
                                 <li>
-                                    <a className="text-lg">ABOUT</a>
+                                    <a className="text-lg">OM MIG</a>
                                 </li>
                                 <li>
-                                    <a className="text-lg">MY WORK</a>
+                                    <a className="text-lg">MIT ARBEJDE</a>
                                 </li>
                                 <li>
-                                    <a className="text-lg">CONTACT</a>
+                                    <a className="text-lg">KONTAKT</a>
                                 </li>
                             </ul>
                         </div>
@@ -37,13 +37,13 @@ export default function Home() {
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             <li>
-                                <a className="text-xl">ABOUT</a>
+                                <a className="text-xl">OM MIG</a>
                             </li>
                             <li>
-                                <a className="text-xl">MY WORK</a>
+                                <a className="text-xl">MIT ARBEJDE</a>
                             </li>
                             <li>
-                                <a className="text-xl">CONTACT</a>
+                                <a className="text-xl">KONTAKT</a>
                             </li>
                         </ul>
                     </div>
@@ -102,10 +102,10 @@ export default function Home() {
                 <div className="flex flex-col items-center">
                     <div className="flex gap-8 w-full">
                         <div className="flex-1 flex justify-center">
-                            <div className="text-3xl font-bold py-5">Education</div>
+                            <div className="text-3xl font-bold py-5">Uddannelse</div>
                         </div>
                         <div className="flex-1 flex justify-center">
-                            <div className="text-3xl font-bold py-5">Work Experience</div>
+                            <div className="text-3xl font-bold py-5">Erhvervserfaring</div>
                         </div>
                     </div>
 
@@ -113,14 +113,34 @@ export default function Home() {
                         <div className="flex-1 flex justify-center">
                             <div className="card card-border border-neutral-content bg-base-200 w-121 h-100">
                                 <div className="card-body">
-                                    <ul className="steps steps-vertical text-sm">
-                                        <li className="step">
-                                            <span className="step-icon">📚</span>
-                                            <span className="step-title">Register</span>
+                                    <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                                        <li>
+                                            <hr className="bg-base-content" />
+                                            <div className="timeline-middle">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div className="timeline-start mb-10 md:text-end">
+                                                <time className="font-mono italic"> 2020-:</time>
+                                                <div className="text-lg font-black"> EUX - Datatekniker med speciale i programmering</div>
+                                                Midtbyens Gymnasium, Mercantec
+                                            </div>
+                                            <hr className="bg-base-content" />
                                         </li>
-                                        <li className="step">
-                                            <span className="step-icon">📚</span>
-                                            <span className="step-title">Choose plan</span>
+                                        <li>
+                                            <hr className="bg-base-content" />
+                                            <div className="timeline-middle">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div className="timeline-end md:mb-10">
+                                                <time className="font-mono italic">2010 - 2019</time>
+                                                <div className="text-lg font-black">Folkeskole</div>
+                                                Karup Skole
+                                            </div>
+                                            <hr className="bg-base-content" />
                                         </li>
                                     </ul>
                                 </div>
@@ -129,16 +149,34 @@ export default function Home() {
                         <div className="flex-1 flex justify-center">
                             <div className="card card-border border-neutral-content bg-base-200 w-121 h-100 place-content-center">
                                 <div className="card-body">
-                                    <ul className="steps steps-vertical text-sm">
-                                        <li data-content="2020 - :" className="step">
-                                            <span className="step-icon">💼</span>
-                                            Jeg har arbejdet som softwareudvikler siden 2020, hvor jeg har haft mulighed for at arbejde med forskellige teknologier og projekter.
+                                    <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                                        <li>
+                                            <hr className="bg-base-content" />
+                                            <div className="timeline-middle">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div className="timeline-start mb-10 md:text-end">
+                                                <time className="font-mono italic"> 2021-:</time>
+                                                <div className="text-lg font-black"> Skoleoplæringscenter</div>
+                                                På skoleoplæringscenteret har jeg både arbejdet alene og sammen med et team.
+                                            </div>
+                                            <hr className="bg-base-content" />
                                         </li>
-                                        <li className="step">
-                                            <span className="step-icon">💼</span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus magnam repudiandae, natus molestias odit consequatur quas, totam aperiam modi dignissimos, iusto sint ut reiciendis ab dolores tempora placeat quis! 2020 - Present
-                                        </li>
-                                        <li className="step">
-                                            <span className="step-icon">💼</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur debitis necessitatibus. Quasi reprehenderit illo, ad hic accusantium laboriosam eum vel quae, voluptatem ullam facere quisquam accusamus quos, facilis perferendis.
+                                        <li>
+                                            <hr className="bg-base-content" />
+                                            <div className="timeline-middle">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div className="timeline-end md:mb-10">
+                                                <time className="font-mono italic">2019 - 2021</time>
+                                                <div className="text-lg font-black">FK Distribution</div>
+                                                Reklameomdeler
+                                            </div>
+                                            <hr className="bg-base-content" />
                                         </li>
                                     </ul>
                                 </div>

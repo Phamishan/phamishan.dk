@@ -22,14 +22,14 @@ export default function Home() {
                             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
                                 <li>
                                     <a className="text-lg" href="/about">
-                                        ABOUT
+                                        OM MIG
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="text-lg">MY WORK</a>
+                                    <a className="text-lg">MIT ARBEJDE</a>
                                 </li>
                                 <li>
-                                    <a className="text-lg">CONTACT</a>
+                                    <a className="text-lg">KONTAKT</a>
                                 </li>
                             </ul>
                         </div>
@@ -41,14 +41,14 @@ export default function Home() {
                         <ul className="menu menu-horizontal px-1">
                             <li>
                                 <a className="text-xl" href="/about">
-                                    ABOUT
+                                    OM MIG
                                 </a>
                             </li>
                             <li>
-                                <a className="text-xl">MY WORK</a>
+                                <a className="text-xl">MIT ARBEJDE</a>
                             </li>
                             <li>
-                                <a className="text-xl">CONTACT</a>
+                                <a className="text-xl">KONTAKT</a>
                             </li>
                         </ul>
                     </div>
@@ -91,11 +91,11 @@ export default function Home() {
                             </span>
                             Karup, Denmark
                         </p>
-                        <p>21 years old developer with 5 years of experience.</p>
+                        <p>21 år programmør med 5 års erfaring.</p>
                     </div>
                 </div>
 
-                <div className="flex justify-center text-3xl font-bold py-5">Personal projects</div>
+                <div className="flex justify-center text-3xl font-bold py-5">Personlige projekter</div>
 
                 <div className="card card-border border-neutral-content bg-base-200 w-250">
                     <div className="card-body">
@@ -172,7 +172,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="flex justify-center text-3xl font-bold py-5">Technologies</div>
+                <div className="flex justify-center text-3xl font-bold py-5">Teknologier</div>
                 <div className="pb-8">
                     <div className="card card-border border-neutral-content bg-base-200 w-250 h-100">
                         <div className="card-body">
