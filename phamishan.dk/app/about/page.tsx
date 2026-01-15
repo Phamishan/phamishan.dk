@@ -20,13 +20,19 @@ export default function Home() {
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
                                 <li>
-                                    <a className="text-lg">OM MIG</a>
+                                    <a className="text-lg" href="/about">
+                                        OM MIG
+                                    </a>
                                 </li>
                                 <li>
-                                    <a className="text-lg">MIT ARBEJDE</a>
+                                    <a className="text-lg" href="/work">
+                                        MIT ARBEJDE
+                                    </a>
                                 </li>
                                 <li>
-                                    <a className="text-lg">KONTAKT</a>
+                                    <a className="text-lg" href="/contact">
+                                        KONTAKT
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -37,26 +43,34 @@ export default function Home() {
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             <li>
-                                <a className="text-xl">OM MIG</a>
+                                <a className="text-xl" href="/about">
+                                    OM MIG
+                                </a>
                             </li>
                             <li>
-                                <a className="text-xl">MIT ARBEJDE</a>
+                                <a className="text-xl" href="/work">
+                                    MIT ARBEJDE
+                                </a>
                             </li>
                             <li>
-                                <a className="text-xl">KONTAKT</a>
+                                <a className="text-xl" href="/contact">
+                                    KONTAKT
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div className="navbar-end flex gap-2">
-                        <button className="btn btn-outline">
-                            <MdEmail />
-                        </button>
-                        <button className="btn btn-outline">
-                            <FaLinkedin />
-                        </button>
-                        <button className="btn btn-outline">
-                            <FaGithub />
-                        </button>
+                    <div className="navbar-end">
+                        <div className="flex gap-3">
+                            <a href="mailto:phamishan@phamishan.dk" className="btn btn-ghost btn-circle">
+                                <MdEmail size={24} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/phamishan/" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-circle">
+                                <FaLinkedin size={24} />
+                            </a>
+                            <a href="https://github.com/Phamishan" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-circle">
+                                <FaGithub size={24} />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -66,15 +80,15 @@ export default function Home() {
                             <h2 className="card-title justify-start text-xl">Phamishan Packiaseelan</h2>
                             <div className="card-actions justify-end">
                                 <div className="items-center flex gap-2">
-                                    <button className="btn btn-outline">
-                                        <MdEmail />
-                                    </button>
-                                    <button className="btn btn-outline">
-                                        <FaLinkedin />
-                                    </button>
-                                    <button className="btn btn-outline">
-                                        <FaGithub />
-                                    </button>
+                                    <a href="mailto:phamishan@phamishan.dk" className="btn btn-ghost btn-circle">
+                                        <MdEmail size={24} />
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/phamishan/" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-circle">
+                                        <FaLinkedin size={24} />
+                                    </a>
+                                    <a href="https://github.com/Phamishan" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-circle">
+                                        <FaGithub size={24} />
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -91,9 +105,7 @@ export default function Home() {
                                 <p>Jeg er en målrettet og ung dreng, som altid stræber efter at lære mere og udvikle mine færdigheder inden for softwareudvikling.</p>
                             </div>
                             <div className="flex-shrink-0">
-                                <div className="relative w-40 h-40">
-                                    <Image src="/assets/phamishan.png" alt="Phamishan Packiaseelan" width={300} height={300} className="w-full h-full rounded-lg shadow-md object-cover" />
-                                </div>
+                                <div className="relative w-40 h-40">{/* <Image src="/assets/phamishan.png" alt="Phamishan Packiaseelan" width={300} height={300} className="w-full h-full rounded-lg shadow-md object-cover" /> */}</div>
                             </div>
                         </div>
                     </div>

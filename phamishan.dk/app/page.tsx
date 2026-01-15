@@ -6,7 +6,28 @@ import Starfield from "react-starfield";
 import Link from "next/link";
 import Image from "next/image";
 
+function calculateAge() {
+    const birthDate = new Date(2004, 4, 3);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
+function getExperienceYears() {
+    const startYear = 2020;
+    const currentYear = new Date().getFullYear();
+    return currentYear - startYear;
+}
+
 export default function Home() {
+    const age = calculateAge();
+    const experienceYears = getExperienceYears();
     return (
         <>
             {/* <MouseGlow /> */}
@@ -26,10 +47,14 @@ export default function Home() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="text-lg">MIT ARBEJDE</a>
+                                    <a className="text-lg" href="/work">
+                                        MIT ARBEJDE
+                                    </a>
                                 </li>
                                 <li>
-                                    <a className="text-lg">KONTAKT</a>
+                                    <a className="text-lg" href="/contact">
+                                        KONTAKT
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -45,23 +70,29 @@ export default function Home() {
                                 </a>
                             </li>
                             <li>
-                                <a className="text-xl">MIT ARBEJDE</a>
+                                <a className="text-xl" href="/work">
+                                    MIT ARBEJDE
+                                </a>
                             </li>
                             <li>
-                                <a className="text-xl">KONTAKT</a>
+                                <a className="text-xl" href="/contact">
+                                    KONTAKT
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div className="navbar-end flex gap-2">
-                        <button className="btn btn-outline">
-                            <MdEmail />
-                        </button>
-                        <button className="btn btn-outline">
-                            <FaLinkedin />
-                        </button>
-                        <button className="btn btn-outline">
-                            <FaGithub />
-                        </button>
+                    <div className="navbar-end">
+                        <div className="flex gap-3">
+                            <a href="mailto:phamishan@phamishan.dk" className="btn btn-ghost btn-circle">
+                                <MdEmail size={24} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/phamishan/" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-circle">
+                                <FaLinkedin size={24} />
+                            </a>
+                            <a href="https://github.com/Phamishan" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-circle">
+                                <FaGithub size={24} />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -91,7 +122,9 @@ export default function Home() {
                             </span>
                             Karup, Denmark
                         </p>
-                        <p>21 år programmør med 5 års erfaring.</p>
+                        <p id="short-description">
+                            {age} år programmør med {experienceYears} års erfaring.
+                        </p>
                     </div>
                 </div>
 
@@ -163,6 +196,23 @@ export default function Home() {
                                     <a onClick={goTo} href="#slide3" className="btn btn-circle">
                                         ❮
                                     </a>
+                                    <a onClick={goTo} href="#slide5" className="btn btn-circle">
+                                        ❯
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="slide5" className="carousel-item relative w-full flex items-center justify-center">
+                                <Image src="/assets/phamishan.dk.png" alt="Phamishan.dk" className="w-full h-full object-contain" width={800} height={400} />
+                                <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
+                                    <h3 className="text-lg font-bold">Phamishan.dk</h3>
+                                </div>
+                                <a href="https://github.com/Phamishan/Phamishan.dk" target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 bg-black bg-opacity-70 text-white p-2 rounded-lg transition-all duration-200 hover:bg-opacity-90">
+                                    <FaGithub className="w-6 h-6" />
+                                </a>
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a onClick={goTo} href="#slide4" className="btn btn-circle">
+                                        ❮
+                                    </a>
                                     <a onClick={goTo} href="#slide1" className="btn btn-circle">
                                         ❯
                                     </a>
@@ -188,6 +238,7 @@ export default function Home() {
                                 <div className="badge badge-outline">React</div>
                                 <div className="badge badge-outline">TypeScript</div>
                                 <div className="badge badge-outline">Tailwind CSS</div>
+                                <div className="badge badge-outline">Application Language</div>
                             </div>
                         </div>
                     </div>
