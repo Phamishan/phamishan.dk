@@ -144,7 +144,7 @@ export default function Home() {
                         <div className="flex-1 flex justify-center">
                             <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
                                 <div className="card-body">
-                                    <Image src="/assets/phamibot.png" alt="PhamiBot" className="w-full h-full object-contain cursor-pointer" width={800} height={400} onClick={() => setSelectedImage("/assets/phamibot.png")} />
+                                    <Image src="/assets/phamibot.png" alt="PhamiBot" className="w-full h-full object-contain cursor-pointer" width={800} height={400} loading="eager" onClick={() => setSelectedImage("/assets/phamibot.png")} />
                                     <div>Discord bot</div>
                                     <div className="flex flex-row justify-between items-center">
                                         <div>Lavet i JavaScript</div>
@@ -158,7 +158,7 @@ export default function Home() {
                         <div className="flex-1 flex justify-center">
                             <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
                                 <div className="card-body">
-                                    <Image src="/assets/phamijam.png" alt="PhamiJam" className="w-full h-full object-contain cursor-pointer" width={800} height={400} onClick={() => setSelectedImage("/assets/phamijam.png")} />
+                                    <Image src="/assets/phamijam.png" alt="PhamiJam" className="w-full h-full object-contain cursor-pointer" width={800} height={400} loading="eager" onClick={() => setSelectedImage("/assets/phamijam.png")} />
                                     <div>Musikafspiller</div>
                                     <div className="flex flex-row justify-between items-center">
                                         <div>Lavet i Flutter</div>

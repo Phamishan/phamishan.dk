@@ -100,12 +100,12 @@ export default function Home() {
                                             <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
                                         </svg>
                                     </span>
-                                    Karup, Denmark
+                                    Karup, Danmark
                                 </p>
                                 <p>Jeg er en målrettet og ung dreng, som altid stræber efter at lære mere og udvikle mine færdigheder inden for softwareudvikling.</p>
                             </div>
                             <div className="flex-shrink-0">
-                                <div className="relative w-40 h-40">{/* <Image src="/assets/phamishan.png" alt="Phamishan Packiaseelan" width={300} height={300} className="w-full h-full rounded-lg shadow-md object-cover" /> */}</div>
+                                <div className="relative w-40 h-40">{<Image src="/assets/phamishan.png" alt="Phamishan Packiaseelan" width={300} height={300} className="w-full h-full rounded-lg shadow-md object-cover" loading="eager" />}</div>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ export default function Home() {
 
                     <div className="flex gap-8 w-full">
                         <div className="flex-1 flex justify-center">
-                            <div className="card card-border border-neutral-content bg-base-200 w-121 h-100">
+                            <div className="card card-border border-neutral-content bg-base-200 w-121">
                                 <div className="card-body">
                                     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                                         <li>
@@ -134,7 +134,7 @@ export default function Home() {
                                                 </svg>
                                             </div>
                                             <div className="timeline-start mb-10 md:text-end">
-                                                <time className="font-mono italic"> 2020-:</time>
+                                                <time className="font-mono italic"> 2020 - 2026</time>
                                                 <div className="text-lg font-black"> EUX - Datatekniker med speciale i programmering</div>
                                                 Midtbyens Gymnasium, Mercantec
                                             </div>
@@ -159,7 +159,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="flex-1 flex justify-center">
-                            <div className="card card-border border-neutral-content bg-base-200 w-121 h-100 place-content-center">
+                            <div className="card card-border border-neutral-content bg-base-200 w-121">
                                 <div className="card-body">
                                     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                                         <li>
@@ -170,9 +170,23 @@ export default function Home() {
                                                 </svg>
                                             </div>
                                             <div className="timeline-start mb-10 md:text-end">
-                                                <time className="font-mono italic"> 2021-:</time>
+                                                <time className="font-mono italic"> 2021 - 2026</time>
                                                 <div className="text-lg font-black"> Skoleoplæringscenter</div>
                                                 På skoleoplæringscenteret har jeg både arbejdet alene og sammen med et team.
+                                            </div>
+                                            <hr className="bg-base-content" />
+                                        </li>
+                                        <li>
+                                            <hr className="bg-base-content" />
+                                            <div className="timeline-middle">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div className="timeline-start mb-10 md:text-end">
+                                                <time className="font-mono italic">2025</time>
+                                                <div className="text-lg font-black">Inventio.it (2 uger)</div>
+                                                2 ugers praktik forløb hos Inventio.it, hvor jeg fik muligheden for at arbejde på en rigtig arbejdsplads og prøvede Application Language af i Microsoft Business Central.
                                             </div>
                                             <hr className="bg-base-content" />
                                         </li>
@@ -186,7 +200,7 @@ export default function Home() {
                                             <div className="timeline-end md:mb-10">
                                                 <time className="font-mono italic">2019 - 2021</time>
                                                 <div className="text-lg font-black">FK Distribution</div>
-                                                Reklameomdeler
+                                                Reklameomdeler.
                                             </div>
                                             <hr className="bg-base-content" />
                                         </li>

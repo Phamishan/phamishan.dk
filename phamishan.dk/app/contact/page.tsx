@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdPhoneIphone } from "react-icons/md";
 import Link from "next/link";
 
 export default function Home() {
@@ -83,6 +83,10 @@ export default function Home() {
                                 <a href="mailto:phamishan@phamishan.dk" className="btn btn-outline btn-lg justify-start gap-3">
                                     <MdEmail size={24} />
                                     phamishan@phamishan.dk
+                                </a>
+                                <a href="tel:+4525648800" className="btn btn-outline btn-lg justify-start gap-3">
+                                    <MdPhoneIphone size={24} />
+                                    +45 25 64 88 00
                                 </a>
                                 <a href="https://www.linkedin.com/in/phamishan/" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg justify-start gap-3">
                                     <FaLinkedin size={24} />
