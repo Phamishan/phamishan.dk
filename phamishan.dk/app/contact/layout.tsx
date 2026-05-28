@@ -1,6 +1,6 @@
 export const metadata = {
-    title: "Kontakt - Phamishan",
-    description: "Kontakt Phillip Pham - Softwareudvikler",
+    title: "Kontakt | Phamishan",
+    description: "Phamishans personlige hjemmeside",
 };
 
 export default function ContactLayout({
