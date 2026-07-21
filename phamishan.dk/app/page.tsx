@@ -204,7 +204,7 @@ export default function Home() {
                                     <FaGithub className="w-6 h-6" />
                                 </a>
                                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                                    <a onClick={goTo} href="#slide4" className="btn btn-circle">
+                                    <a onClick={goTo} href="#slide6" className="btn btn-circle">
                                         ❮
                                     </a>
                                     <a onClick={goTo} href="#slide2" className="btn btn-circle">
@@ -217,18 +217,18 @@ export default function Home() {
                                 className="carousel-item relative w-full flex items-center justify-center"
                             >
                                 <Image
-                                    src="/assets/phamijam.png"
-                                    alt="PhamiJam"
+                                    src="/assets/phamijam-desktop.png"
+                                    alt="PhamiJam - Desktop"
                                     className="w-full h-full object-contain"
                                     width={800}
                                     height={400}
                                     loading="eager"
                                 />
                                 <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
-                                    <h3 className="text-lg font-bold">PhamiJam</h3>
+                                    <h3 className="text-lg font-bold">PhamiJam - Desktop</h3>
                                 </div>
                                 <a
-                                    href="https://github.com/Phamishan/PhamiJam"
+                                    href="https://github.com/Phamishan/PhamiJam-Desktop"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="absolute top-4 right-4 bg-black bg-opacity-70 text-white p-2 rounded-lg transition-all duration-200 hover:bg-opacity-90"
@@ -246,6 +246,38 @@ export default function Home() {
                             </div>
                             <div
                                 id="slide3"
+                                className="carousel-item relative w-full flex items-center justify-center"
+                            >
+                                <Image
+                                    src="/assets/phamijam-mobile.png"
+                                    alt="PhamiJam - Mobile"
+                                    className="w-full h-full object-contain"
+                                    width={800}
+                                    height={400}
+                                    loading="eager"
+                                />
+                                <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
+                                    <h3 className="text-lg font-bold">PhamiJam - Mobile</h3>
+                                </div>
+                                <a
+                                    href="https://github.com/Phamishan/PhamiJam-Mobile"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="absolute top-4 right-4 bg-black bg-opacity-70 text-white p-2 rounded-lg transition-all duration-200 hover:bg-opacity-90"
+                                >
+                                    <FaGithub className="w-6 h-6" />
+                                </a>
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a onClick={goTo} href="#slide2" className="btn btn-circle">
+                                        ❮
+                                    </a>
+                                    <a onClick={goTo} href="#slide4" className="btn btn-circle">
+                                        ❯
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                id="slide4"
                                 className="carousel-item relative w-full flex items-center justify-center"
                             >
                                 <Image
@@ -268,16 +300,16 @@ export default function Home() {
                                     <FaGithub className="w-6 h-6" />
                                 </a>
                                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                                    <a onClick={goTo} href="#slide2" className="btn btn-circle">
+                                    <a onClick={goTo} href="#slide3" className="btn btn-circle">
                                         ❮
                                     </a>
-                                    <a onClick={goTo} href="#slide4" className="btn btn-circle">
+                                    <a onClick={goTo} href="#slide5" className="btn btn-circle">
                                         ❯
                                     </a>
                                 </div>
                             </div>
                             <div
-                                id="slide4"
+                                id="slide5"
                                 className="carousel-item relative w-full flex items-center justify-center"
                             >
                                 <Image
@@ -300,16 +332,16 @@ export default function Home() {
                                     <FaGithub className="w-6 h-6" />
                                 </a>
                                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                                    <a onClick={goTo} href="#slide3" className="btn btn-circle">
+                                    <a onClick={goTo} href="#slide4" className="btn btn-circle">
                                         ❮
                                     </a>
-                                    <a onClick={goTo} href="#slide5" className="btn btn-circle">
+                                    <a onClick={goTo} href="#slide6" className="btn btn-circle">
                                         ❯
                                     </a>
                                 </div>
                             </div>
                             <div
-                                id="slide5"
+                                id="slide6"
                                 className="carousel-item relative w-full flex items-center justify-center"
                             >
                                 <Image
@@ -332,7 +364,7 @@ export default function Home() {
                                     <FaGithub className="w-6 h-6" />
                                 </a>
                                 <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                                    <a onClick={goTo} href="#slide4" className="btn btn-circle">
+                                    <a onClick={goTo} href="#slide5" className="btn btn-circle">
                                         ❮
                                     </a>
                                     <a onClick={goTo} href="#slide1" className="btn btn-circle">

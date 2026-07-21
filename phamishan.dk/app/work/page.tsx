@@ -12,9 +12,11 @@ import ProjectModal from "../components/projectModal";
 interface Project {
     name: string;
     image: string;
+    images?: string[];
     description: string;
     technology: string;
     type: string;
+    downloadUrl?: string;
 }
 
 const projectsData: Record<string, Project> = {
@@ -25,12 +27,20 @@ const projectsData: Record<string, Project> = {
         technology: "JavaScript",
         description: "En robot lavet til social-platformen Discord, som tilbyder forskellige funktioner mine venner og jeg bruger, såsom tjekke spil statistikker, sende sjove billeder og meget mere. \n\nLavet i JavaScript med hjælp af discord.js biblioteket.",
     },
-    phamijam: {
-        name: "PhamiJam",
-        image: "/assets/phamijam.png",
+    phamijam_desktop: {
+        name: "PhamiJam - Desktop",
+        image: "/assets/phamijam-desktop.png",
         type: "Musikafspiller",
         technology: "Flutter",
-        description: "En musikafspiller lavet til pc og mobil, som skal fungere som en erstatning for Spotify og lignende tjenester. \n\nLavet i Flutter for at kunne køre på både pc og mobil enheder med en enkelt kodebase.",
+        description: "En musikafspiller lavet til Windows Desktop, som skal fungere som en erstatning for Spotify og lignende tjenester. \n\nLavet i Flutter.",
+        downloadUrl: "https://github.com/Phamishan/PhamiJam-Desktop/releases/latest/download/phamijam_setup.exe",
+    },
+    phamijam_mobile: {
+        name: "PhamiJam - Mobile",
+        image: "/assets/phamijam-mobile.png",
+        type: "Musikafspiller",
+        technology: "Flutter",
+        description: "En musikafspiller lavet til mobil, som skal fungere som en erstatning for Spotify og lignende tjenester. \n\nLavet i Flutter for at kunne køre på både iOS og Android enheder med en enkelt kodebase.",
     },
     phamiapex: {
         name: "PhamiApex",
@@ -133,10 +143,10 @@ export default function Home() {
                             <div className="text-2xl font-bold py-5">PhamiBot</div>
                         </div>
                         <div className="flex-1 flex justify-center">
-                            <div className="text-2xl font-bold py-5">PhamiJam</div>
+                            <div className="text-2xl font-bold py-5">PhamiJam - Desktop</div>
                         </div>
                         <div className="flex-1 flex justify-center">
-                            <div className="text-2xl font-bold py-5">PhamiApex</div>
+                            <div className="text-2xl font-bold py-5">PhamiJam - Mobile</div>
                         </div>
                     </div>
 
@@ -144,7 +154,9 @@ export default function Home() {
                         <div className="flex-1 flex justify-center">
                             <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
                                 <div className="card-body">
-                                    <Image src="/assets/phamibot.png" alt="PhamiBot" className="w-full h-full object-contain cursor-pointer" width={800} height={400} loading="eager" onClick={() => setSelectedImage("/assets/phamibot.png")} />
+                                    <div className="relative w-full h-48 shrink-0">
+                                        <Image src="/assets/phamibot.png" alt="PhamiBot" fill className="object-contain cursor-pointer" onClick={() => setSelectedImage("/assets/phamibot.png")} />
+                                    </div>
                                     <div>Discord bot</div>
                                     <div className="flex flex-row justify-between items-center">
                                         <div>Lavet i JavaScript</div>
@@ -158,11 +170,13 @@ export default function Home() {
                         <div className="flex-1 flex justify-center">
                             <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
                                 <div className="card-body">
-                                    <Image src="/assets/phamijam.png" alt="PhamiJam" className="w-full h-full object-contain cursor-pointer" width={800} height={400} loading="eager" onClick={() => setSelectedImage("/assets/phamijam.png")} />
-                                    <div>Musikafspiller</div>
+                                    <div className="relative w-full h-48 shrink-0">
+                                        <Image src="/assets/phamijam-desktop.png" alt="PhamiJam - Desktop" fill className="object-contain cursor-pointer" onClick={() => setSelectedImage("/assets/phamijam-desktop.png")} />
+                                    </div>
+                                    <div>Musikafspiller - Desktop App</div>
                                     <div className="flex flex-row justify-between items-center">
                                         <div>Lavet i Flutter</div>
-                                        <button className="cursor-pointer btn btn-outline" onClick={() => setSelectedProject(projectsData.phamijam)}>
+                                        <button className="cursor-pointer btn btn-outline" onClick={() => setSelectedProject(projectsData.phamijam_desktop)}>
                                             Læs mere
                                         </button>
                                     </div>
@@ -172,11 +186,13 @@ export default function Home() {
                         <div className="flex-1 flex justify-center">
                             <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
                                 <div className="card-body">
-                                    <Image src="/assets/phamiapex.png" alt="PhamiApex" className="w-full h-full object-contain cursor-pointer" width={800} height={400} onClick={() => setSelectedImage("/assets/phamiapex.png")} />
-                                    <div>Spil statistik tjekker</div>
+                                    <div className="relative w-full h-48 shrink-0">
+                                        <Image src="/assets/phamijam-mobile.png" alt="PhamiJam - Mobile" fill className="object-contain cursor-pointer" onClick={() => setSelectedImage("/assets/phamijam-mobile.png")} />
+                                    </div>
+                                    <div>Musikafspiller - Mobil App</div>
                                     <div className="flex flex-row justify-between items-center">
-                                        <div>Lavet i Next.js</div>
-                                        <button className="cursor-pointer btn btn-outline" onClick={() => setSelectedProject(projectsData.phamiapex)}>
+                                        <div>Lavet i Flutter</div>
+                                        <button className="cursor-pointer btn btn-outline" onClick={() => setSelectedProject(projectsData.phamijam_mobile)}>
                                             Læs mere
                                         </button>
                                     </div>
@@ -189,6 +205,9 @@ export default function Home() {
                 <div className="flex flex-col items-center">
                     <div className="flex gap-8 w-full">
                         <div className="flex-1 flex justify-center">
+                            <div className="text-2xl font-bold py-5">PhamiApex</div>
+                        </div>
+                        <div className="flex-1 flex justify-center">
                             <div className="text-2xl font-bold py-5">PhamiValo</div>
                         </div>
                         <div className="flex-1 flex justify-center">
@@ -200,7 +219,25 @@ export default function Home() {
                         <div className="flex-1 flex justify-center">
                             <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
                                 <div className="card-body">
-                                    <Image src="/assets/phamivalo.png" alt="PhamiValo" className="w-full h-full object-contain cursor-pointer" width={800} height={400} onClick={() => setSelectedImage("/assets/phamivalo.png")} />
+                                    <div className="relative w-full h-48 shrink-0">
+                                        <Image src="/assets/phamiapex.png" alt="PhamiApex" fill className="object-contain cursor-pointer" onClick={() => setSelectedImage("/assets/phamiapex.png")} />
+                                    </div>
+                                    <div>Spil statistik tjekker</div>
+                                    <div className="flex flex-row justify-between items-center">
+                                        <div>Lavet i Next.js</div>
+                                        <button className="cursor-pointer btn btn-outline" onClick={() => setSelectedProject(projectsData.phamiapex)}>
+                                            Læs mere
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex-1 flex justify-center">
+                            <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
+                                <div className="card-body">
+                                    <div className="relative w-full h-48 shrink-0">
+                                        <Image src="/assets/phamivalo.png" alt="PhamiValo" fill className="object-contain cursor-pointer" onClick={() => setSelectedImage("/assets/phamivalo.png")} />
+                                    </div>
                                     <div>Spil statistik tjekker (andet spil + mobil version)</div>
                                     <div className="flex flex-row justify-between items-center">
                                         <div>Lavet i Flutter</div>
@@ -212,17 +249,17 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="flex-1 flex justify-center">
-                            <div className="flex gap-8 w-full">
-                                <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
-                                    <div className="card-body">
-                                        <Image src="/assets/phamishan.dk.png" alt="Phamishan.dk" className="w-full h-full object-contain cursor-pointer" width={800} height={400} onClick={() => setSelectedImage("/assets/phamishan.dk.png")} />
-                                        <div>Personlig hjemmeside</div>
-                                        <div className="flex flex-row justify-between items-center">
-                                            <div>Lavet i Next.js</div>
-                                            <button className="cursor-pointer btn btn-outline" onClick={() => setSelectedProject(projectsData.phamishandk)}>
-                                                Læs mere
-                                            </button>
-                                        </div>
+                            <div className="card card-border border-neutral-content bg-base-200 w-100 h-100 hover:shadow-lg transition-shadow">
+                                <div className="card-body">
+                                    <div className="relative w-full h-48 shrink-0">
+                                        <Image src="/assets/phamishan.dk.png" alt="Phamishan.dk" fill className="object-contain cursor-pointer" onClick={() => setSelectedImage("/assets/phamishan.dk.png")} />
+                                    </div>
+                                    <div>Personlig hjemmeside</div>
+                                    <div className="flex flex-row justify-between items-center">
+                                        <div>Lavet i Next.js</div>
+                                        <button className="cursor-pointer btn btn-outline" onClick={() => setSelectedProject(projectsData.phamishandk)}>
+                                            Læs mere
+                                        </button>
                                     </div>
                                 </div>
                             </div>
