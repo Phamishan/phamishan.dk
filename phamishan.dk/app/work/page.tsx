@@ -279,7 +279,7 @@ export default function Home() {
                                 </svg>
                             </button>
                             <div className="bg-base-100 rounded-lg overflow-hidden">
-                                <Image src={selectedImage} alt="Enlarged view" className="w-full h-full object-contain" width={1200} height={800} />
+                                <Image src={selectedImage} alt="Enlarged view" className="max-w-full max-h-[90vh] w-auto h-auto object-contain" width={1200} height={800} />
                             </div>
                         </div>
                     </div>
