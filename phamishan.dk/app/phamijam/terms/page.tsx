@@ -14,7 +14,7 @@ export default function PhamiJamTermsOfService() {
                     ← Back to PhamiJam
                 </Link>
                 <h1 className="text-4xl font-bold">Terms of Service</h1>
-                <p className="text-sm text-base-content/60">Last updated: July 21, 2026</p>
+                <p className="text-sm text-base-content/60">Last updated: August 14, 2026</p>
             </div>
 
             <div className="card card-border border-neutral-content bg-base-200 w-full max-w-3xl">
@@ -27,8 +27,8 @@ export default function PhamiJamTermsOfService() {
                     <section className="flex flex-col gap-2">
                         <h2 className="text-2xl font-semibold">1. Description of Service</h2>
                         <p>
-                            PhamiJam is a free, independently developed music player for desktop and mobile that lets you play music from local files on your device and search and stream tracks via YouTube Music, organize playlists, and
-                            optionally share what you&apos;re playing through Discord Rich Presence.
+                            PhamiJam is a free, independently developed music player for desktop and mobile that lets you play music from local files on your device, search and stream tracks via YouTube Music, organize playlists,
+                            optionally connect a Google Drive folder to play your own music stored there, and optionally share what you&apos;re playing through Discord Rich Presence.
                         </p>
                     </section>
 
@@ -45,8 +45,9 @@ export default function PhamiJamTermsOfService() {
                     <section className="flex flex-col gap-2">
                         <h2 className="text-2xl font-semibold">4. Content &amp; Third-Party Services</h2>
                         <p>
-                            Local audio files you play through the App remain your own and are never uploaded to our servers. Music streamed via YouTube Music is subject to YouTube&apos;s own Terms of Service, and is not hosted or owned by
-                            us. We are not responsible for the availability or content of third-party services the App integrates with.
+                            Local audio files you play through the App remain your own and are never uploaded to our servers. If you connect a Google Drive folder, the audio files in it also remain your own, stay in your Google Drive, and
+                            are streamed directly from Drive to the App &mdash; we never copy or store them on our servers. Music streamed via YouTube Music is subject to YouTube&apos;s own Terms of Service, and is not hosted or owned by us.
+                            We are not responsible for the availability or content of third-party services the App integrates with.
                         </p>
                     </section>
 
