@@ -22,15 +22,8 @@ function calculateAge() {
     return age;
 }
 
-function getExperienceYears() {
-    const startYear = 2020;
-    const currentYear = new Date().getFullYear();
-    return currentYear - startYear;
-}
-
 export default function Home() {
     const age = calculateAge();
-    const experienceYears = getExperienceYears();
     return (
         <>
             {/* <MouseGlow /> */}
@@ -168,7 +161,7 @@ export default function Home() {
                             Karup, Denmark
                         </p>
                         <p id="short-description">
-                            {age} år programmør med {experienceYears} års erfaring.
+                            {age} år programmør.
                         </p>
                     </div>
                 </div>
